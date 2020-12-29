@@ -16,22 +16,20 @@
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
+    "@ant-design/icons": "^4.3.0",
     "@chakra-ui/react": "^1.0.4",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "antd": "4.9.4",
+    "formik": "^2.2.6",
+    "formik-antd": "^2.0.1",
     "framer-motion": "^3.1.1",
-    "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
+    "react": ">=16",
+    "react-use": "^15.3.4"
   },
   "prettier": {
     "printWidth": 80,
@@ -40,19 +38,10 @@
     "trailingComma": "es5"
   },
   "name": "use-query-filters",
-  "author": "Armando Magalhães",
+  "author": "Chris Lonardo",
   "module": "dist/use-query-filters.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/use-query-filters.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/use-query-filters.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
+    "@ant-design/icons": "^4.3.0",
     "@babel/core": "^7.12.10",
     "@chakra-ui/icons": "^1.0.2",
     "@chakra-ui/react": "^1.0.4",
@@ -64,17 +53,19 @@
     "@storybook/addon-links": "^6.1.11",
     "@storybook/addons": "^6.1.11",
     "@storybook/react": "^6.1.11",
+    "@types/node": "^14.14.16",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "antd": "4.9.4",
     "babel-loader": "^8.2.2",
+    "formik": "^2.2.6",
+    "formik-antd": "^2.0.1",
     "framer-motion": "^3.1.1",
-    "husky": "^4.3.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "react-select": "^3.1.1",
     "react-use": "^15.3.4",
-    "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
     "typescript": "^4.1.3"

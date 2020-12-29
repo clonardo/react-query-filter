@@ -47,11 +47,14 @@ export const useQueryFilters = (properties: PropertyDescription[]) => {
       onChangeBinding: event => {
         filterActions.updateAt(index, {
           ...filter,
-          binding: event.target.value as Filter['binding'],
+          binding:
+            typeof event == 'string'
+              ? ((event as any) as Filter['binding'])
+              : ((event.target.value as any) as Filter['binding']),
         });
       },
       onChangeField: event => {
-        const fieldKey = event.target.value;
+        const fieldKey = typeof event == 'string' ? event : event.target.value;
 
         filterActions.updateAt(index, {
           ...filter,
@@ -60,7 +63,8 @@ export const useQueryFilters = (properties: PropertyDescription[]) => {
         });
       },
       onChangeOperation: event => {
-        const operationKey = event.target.value;
+        const operationKey =
+          typeof event == 'string' ? event : event.target.value;
         const shouldClearValue =
           shouldRenderValueInputForOperation(operationKey) === false;
 

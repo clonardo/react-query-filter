@@ -38,8 +38,12 @@ export interface FilterRowProps {
   filter: Filter;
   isFirst: boolean;
   onRemove: () => void;
-  onChangeBinding: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  onChangeField: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  onChangeOperation: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChangeBinding: (
+    event: React.ChangeEvent<HTMLSelectElement> | string
+  ) => void;
+  onChangeField: (event: React.ChangeEvent<HTMLSelectElement> | string) => void;
+  onChangeOperation: (
+    event: React.ChangeEvent<HTMLSelectElement> | string
+  ) => void;
   onChangeValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }

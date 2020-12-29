@@ -1,5 +1,7 @@
 # react-query-filters
 
+## Now with Ant Design components
+
 > **Heads up:** This is still a work in progress. A lot of breaking change might happen and a lot of features are still missing. PR's are very welcome but please open an issue first describing what you think could be better.
 
 Set of utilities to implement a Query Builder for filters.
@@ -20,6 +22,8 @@ The `useQueryFilters` will track state changes and enable you do build your quer
     - [x] Strings
     - [x] Numbers
     - [x] Boolean
+    - [ ] Finish migrating to AntD
+    - [ ] Add Formik
     - [ ] Dates
     - [ ] Single Select
     - [ ] Multiple Select
